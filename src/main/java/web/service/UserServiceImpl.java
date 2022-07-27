@@ -11,12 +11,9 @@ import java.util.List;
 
 @Service
 public class UserServiceImpl implements UserService {
+    private final UserDAO userDAO;
 
-
-    private UserDAO userDAO;
-
-    @Autowired
-    public void setUserDAO(UserDAO userDAO) {
+    public UserServiceImpl(UserDAO userDAO) {
         this.userDAO = userDAO;
     }
 
